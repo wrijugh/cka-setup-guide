@@ -1,0 +1,22 @@
+# Show list of VMs
+az vm list -g rg-cka -o table
+az vm list -d -g rg-cka --query "[].{Name:name, Power:powerState, RG:resourceGroup}" -o table
+
+# Show Ips
+az vm show -d -n controller -grg-cka --query "publicIps" -o tsv
+
+az vm show -d -n worker-0 -g rg-cka --query "publicIps" -o tsv
+az vm show -d -n worker-1 -g rg-cka --query "publicIps" -o tsv
+
+
+# Shutdown all vms
+az vm deallocate --ids $(az vm list -d -g rg-cka --query "[?powerState=='VM running'].id" -o tsv)
+
+# Start All VMs
+az vm start --ids $(az vm list -d -g rg-cka --query "[].{id}" -o tsv)
+az vm start --ids $(az vm list -g rg-cka --query "[].id" -o tsv)
+
+# Remote file copy
+scp controller-worker-install.sh wriju@destination:/home/wriju
+
+# Use wget and git to download live
