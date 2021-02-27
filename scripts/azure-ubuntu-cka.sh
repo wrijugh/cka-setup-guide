@@ -40,12 +40,13 @@ echo "----------------- Creating Resource Group -----------------"
 # Create Resource Group in 
 az group create -n $rg -l $loc
 
-echo "----------------- Creating Storage Account -----------------"
+# No need to create a storage acccount as the VM will create automatically if --use-unmanaged is selected and create LRS as mentione in Vm create
+# echo "----------------- Creating Storage Account -----------------"
 # Create storage account and storage container
 # No need to create any container or use the storage account name while creating vm 
 # Because VM will find a storage account in the same resource group and create a container if not present vhds 
 # if no storage account is available then vm create will create a storage account if --use-umamanged-disk option is provided.
-az storage account create -n $storageacc -g $rg --sku Standard_LRS
+# az storage account create -n $storageacc -g $rg --sku Standard_LRS
 #az storage container create -n vmhdd --account-name $storageacc
 
 echo "----------------- Creating Virtual Network -----------------"
