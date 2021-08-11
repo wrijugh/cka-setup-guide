@@ -85,6 +85,7 @@ kubectl get nodes
 - Kubeadm [Installation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 - Docker [Installation](https://docs.docker.com/engine/install/#server)
 - Weaver [Installation](https://www.weave.works/docs/net/latest/kubernetes/kube-addon/)
+- CKA [Curriculam](https://github.com/cncf/curriculum)
 
 ---
 
