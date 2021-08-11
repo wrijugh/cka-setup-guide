@@ -5,7 +5,7 @@
 # run kubeadm
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.230.0.10
 
-#Pod network
+#Pod network https://www.weave.works/docs/net/latest/kubernetes/kube-addon/
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 
 # this output will have two instructions. 
