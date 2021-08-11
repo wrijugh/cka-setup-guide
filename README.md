@@ -61,8 +61,8 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 - Copy the `kubeadm join` command
-- Install the pod network plugin [weaver]
-  `https://www.weave.works/docs/net/latest/kubernetes/kube-addon/`
+- Install the pod network plugin
+  `kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"`
 
 ### 4-Join Worker Node
 
@@ -82,9 +82,9 @@ kubectl get nodes
 
 ## Resources
 
-- Kubeadm installation
-- Docker Installation
-- Weaver Installation
+- Kubeadm [Installation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+- Docker [Installation](https://docs.docker.com/engine/install/#server)
+- Weaver [Installation](https://www.weave.works/docs/net/latest/kubernetes/kube-addon/)
 
 ---
 
