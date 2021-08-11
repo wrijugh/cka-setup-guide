@@ -34,7 +34,7 @@ pipworker0=worker-0-pip
 workeravblset=worker-avblset
 
 adminuser=wriju
-adminpwd='P@ssw0rd!!!!' #must be min 12 char long
+adminpwd='' #must be min 12 char long
 
 echo "----------------- Creating Resource Group -----------------"
 # Create Resource Group in 
