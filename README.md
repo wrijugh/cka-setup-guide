@@ -1,8 +1,11 @@
-# Setting Kubernetes not so hard way
+# Setting up Kubernetes in (not so) hard way
+
 
 *Cluster Preparation Guide for CKA*
 
 Using kubeadm
+
+![K8s](k8.jpg)
 ## Consideration
 
 - Virtual Machines are created in Azure
