@@ -8,15 +8,15 @@ Using kubeadm
 ![K8s](k8.jpg)
 ## Consideration
 
-- Virtual Machines are created in Azure
+- Virtual Machines are created in Azure under Azure VNet
 - One client machine has Public IP others are Private
-- IP Range
-- Weaver
+- IP Range 
 - Docker
 - Kubeadm
 - One master VM
+  - Weaver as Pod network plugin   
 - Two Worker VM
-- One Client VM
+- One Client VM with Public IP
 
 ## Steps
 
@@ -37,7 +37,7 @@ Azure resources Setup [Script](script-aug21/01-azure-cluster.sh)
 
 Login to the Client VM using Public IP then connect to the other three Virtual Machines.
 
-Install & Configure [as uuperuser]
+Install & Configure [as super user]
 
 - IP tables
 - Docker
