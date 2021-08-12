@@ -24,8 +24,13 @@ workerprivateippref='10.230.0.2'
 
 workeravblset='worker-avblset'
 
+
 adminuser=cka
-adminpwd='abcdEFGH12!@' #must be min 12 char long with one number, one special char and alphabet
+echo 'admin username is $adminuser'
+
+#ask for password
+read -s -p "Enter admin Password (should be minimum 12 char strong): " adminpwd
+#echo $adminpwd #must be min 12 char long with one number, one special char and alphabet
 
 clientvm='cka-client'
 controllervm='controller-vm'
