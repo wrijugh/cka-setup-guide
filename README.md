@@ -4,7 +4,7 @@
 
 Using kubeadm
 
-![K8s](k8.jpg)
+![K8s](images/k8.jpg)
 
 ## Consideration
 
@@ -17,6 +17,8 @@ Using kubeadm
   - Weaver as Pod network plugin
 - Two Worker VM
 - One Client VM with Public IP
+
+![Architecture](images/KubernetesCluster.png)
 
 ## Steps
 
@@ -108,6 +110,30 @@ Then check the list of pods
 ```bash
 kubectl get pods
 ```
+
+### 6 - Some useful Azure CLI Commands
+
+Get the list of running VMs in a Resource Group
+
+```bash
+resourceGroup='rg-cka2'
+az vm list -d -g $resourceGroup --query "[].{name:name,powerState:powerState}" -o table
+```
+
+Start all the VMs in a Resrouce Group
+
+```bash
+resourceGroup='rg-cka2'
+az vm start --ids $(az vm list -g $resourceGroup --query "[].id" -o tsv)
+```
+
+Stop (deallocate) all the VMs in a Resource Group
+
+```bash
+resourceGroup='rg-cka2'
+az vm start --ids $(az vm list -g $resourceGroup --query "[].id" -o tsv)
+```
+
 
 ## Resources
 
