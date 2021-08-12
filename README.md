@@ -28,7 +28,8 @@ Using kubeadm
 - Subnet
 - NIC
 - Public IP Address
-- Three Virtual Machines
+- Three Virtual Machines (for Kubernetes)
+- One Virtual machine as client to connect the K8s cluster
 
 Azure resources Setup [Script](script-aug21/01-azure-cluster.sh)
 
@@ -68,7 +69,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 Using the token generated from previous step connect this to the Kubernetes master.
 
-> If you forget generate one by running `sudo kubeadm token create --print-join-command`
+> If you forget it then generate a new one by running `sudo kubeadm token create --print-join-command`
 
 Worker node setup [Script](script-aug21/04-worker-setup.sh)
 
@@ -85,9 +86,13 @@ kubectl get nodes
 - Kubeadm [Installation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 - Docker [Installation](https://docs.docker.com/engine/install/#server)
 - Weaver [Installation](https://www.weave.works/docs/net/latest/kubernetes/kube-addon/)
-- CKA [Curriculam](https://github.com/cncf/curriculum)
+- CKA Exam [Curriculum](https://github.com/cncf/curriculum)
 
 ---
 
 *Prepared and maintained by Wriju Ghosh for CKA Exam playground*
+
+*Welcome to contribute*
+[https://github.dev/wrijugh/cka-setup-guide](https://github.dev/wrijugh/cka-setup-guide)
+
 Tested as of *11-August-2021*
