@@ -131,9 +131,21 @@ Stop (deallocate) all the VMs in a Resource Group
 
 ```bash
 resourceGroup='rg-cka2'
-az vm start --ids $(az vm list -g $resourceGroup --query "[].id" -o tsv)
+az vm deallocate --ids $(az vm list -g $resourceGroup --query "[].id" -o tsv)
 ```
 
+### 7 - Clean up Azure Resources
+
+If you delete the resource group it will delete all the resources inside
+
+```bash
+# Will ask for confirmation
+az group delete -n wriju
+
+# Anyc delete 
+az group delete -n wriju --no-wait 
+
+```
 
 ## Resources
 
