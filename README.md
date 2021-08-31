@@ -89,6 +89,8 @@ mkdir -p $HOME/.kube
 
 Then copy the `~/.kube/config` from master node to client machine using `scp`
 
+Go to the `~/.kube` folder and run the below command
+
 `scp config cka@clientIP:$HOME/.kube`
 
 Then run this command in client machine

@@ -10,7 +10,8 @@ nsg='cka-nsg';
 vnetaddressprefix='10.230.0.0/24'
 subnetaddressprefix='10.230.0.0/27'
 
-size='Standard_DS1_v2' # check the available vm sizes in your region
+# Controller VM should have > 2 cpu
+size='Standard_DS3' # check the available vm sizes in your region
 # az vm list-sizes -l eastus -o table
 
 controllervmprivateip='10.230.0.10'
@@ -28,9 +29,10 @@ workeravblset='worker-avblset'
 adminuser=cka
 echo 'admin username is $adminuser'
 
-#ask for password
-read -s -p "Enter admin Password (should be minimum 12 char strong): " adminpwd
-#echo $adminpwd #must be min 12 char long with one number, one special char and alphabet
+adminpwd='SuperDuper12#$'
+# ask for password
+# read -s -p "Enter admin Password (should be minimum 12 char strong): " adminpwd
+# echo $adminpwd #must be min 12 char long with one number, one special char and alphabet
 
 clientvm='cka-client'
 controllervm='controller-vm'
