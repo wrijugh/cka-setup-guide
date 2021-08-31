@@ -11,7 +11,8 @@ vnetaddressprefix='10.230.0.0/24'
 subnetaddressprefix='10.230.0.0/27'
 
 # Controller VM should have > 2 cpu
-size='Standard_DS3' # check the available vm sizes in your region
+controllervmsize='Standard_DS3' # check the available vm sizes in your region
+size='Standard_DS1'
 # az vm list-sizes -l eastus -o table
 
 controllervmprivateip='10.230.0.10'
@@ -91,7 +92,7 @@ echo "----------------- 10 Creating Controller VM and Provisioning AutoShutdown 
 
 # Provision controller VM use  --no-wait
 
-az vm create -g $rg -n $controllervm --image $vmimage --nics $controllernic --size $size --authentication-type password --admin-username $adminuser --admin-password $adminpwd --use-unmanaged-disk --storage-sku Standard_LRS --os-disk-size-gb 200
+az vm create -g $rg -n $controllervm --image $vmimage --nics $controllernic --size $controllervmsize --authentication-type password --admin-username $adminuser --admin-password $adminpwd --use-unmanaged-disk --storage-sku Standard_LRS --os-disk-size-gb 200
 
 # az vm create -g rg-cka -n controller --image UbuntuLTS --size Standard_DS2 --use-unmanaged-disk --authentication-type=password --admin-username wriju --admin-password 'P@ssw0rd!!!!'
 az vm auto-shutdown -g $rg -n $controllervm --time $shutdownutc
