@@ -161,4 +161,6 @@ Prepared and maintained by Wriju Ghosh for CKA Exam playground
 *Contribute*
 [https://github.com/wrijugh/cka-setup-guide](https://github.com/wrijugh/cka-setup-guide)
 
+Web [https://wrijugh.github.io/cka-setup-guide/](https://wrijugh.github.io/cka-setup-guide/)
+
 Tested as of *31-August-2021*
