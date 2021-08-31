@@ -1,6 +1,6 @@
 loc=eastus
 rg='rg-cka'
-storageacc=wgckastorage
+# storageacc=wgckastorage
 vmimage=ubuntults
 shutdownutc=1230 #Auto Shutdown time in UTC
 
@@ -52,6 +52,7 @@ echo "----------------- 2 Creating Storage Account -----------------"
 # if no storage account is available then vm create will create a storage account if --use-umamanged-disk option is provided.
 # az storage account create -n $storageacc -g $rg --sku Standard_LRS
 #az storage container create -n vmhdd --account-name $storageacc
+echo "Storage Account will be created Automatically while the first VM is created. This is to avoid the name conflict."
 
 echo "----------------- 3 Creating Virtual Network -----------------"
 # Create virtual network
