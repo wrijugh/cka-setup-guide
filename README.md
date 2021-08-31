@@ -89,8 +89,6 @@ mkdir -p $HOME/.kube
 
 Then copy the `~/.kube/config` from master node to client machine using `scp`
 
-Go to the `~/.kube` folder and run the below command
-
 `scp config cka@clientIP:$HOME/.kube`
 
 Then run this command in client machine
@@ -161,6 +159,6 @@ az group delete -n wriju --no-wait
 Prepared and maintained by Wriju Ghosh for CKA Exam playground
 
 *Contribute*
-[https://github.dev/wrijugh/cka-setup-guide](https://github.dev/wrijugh/cka-setup-guide)
+[https://github.com/wrijugh/cka-setup-guide](https://github.com/wrijugh/cka-setup-guide)
 
-Tested as of *11-August-2021*
+Tested as of *31-August-2021*
